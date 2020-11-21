@@ -84,13 +84,13 @@ void	print_othello () {
 
 int	check_put_othello (char color [], int putStone [] , int board [N][N]) {
 	
-		if (board [putStone[1]][putStone[0]] != 0 )
+		if (board [putStone[1]][putStone[0]] != 0 ) //이미 돌이 있을 때  
 		{
 			printf ("invalid input ! (already occupied)\n" )	;
 			return 0	;
 		}
 		
-		else if (putStone [1] >= N || putStone [0] >=N)
+		else if (putStone [1] >= N || putStone [0] >=N) // 게임 판의 크기를 넘어갔을 때 
 		{
 			printf("invalid input ! (should be less than %d)\n", N)	;
 			return 0	;
