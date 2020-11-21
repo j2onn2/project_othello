@@ -30,19 +30,21 @@ void	init_othello	( ) {
 
 void	print_othello () {
 	
-	int i, 	j, k, l	, m;
+	int k, l, m;
+	int o_status =0	;
+	int x_status =0	;
 	
 
 	printf("   ")	;
-	for (i=0; i<N; i++)
+	for (m=0; m<N; m++)
 	{
-		printf(" %d ", i)	;		//첫 줄의 0~5 표현 
+		printf(" %d ", m)	;		//첫 줄의 0~5 표현 
 	}
 	
 	printf ("\n")	;
 	printf ("   ")	;
 	  
-	for (j=0; j<N; j++)			//구분선 표현 
+	for (m=0; m<N; m++)			//구분선 표현 
 	{
 		printf("---")	;	 
 	}
@@ -60,10 +62,13 @@ void	print_othello () {
 			{ printf("  |")	;	}
 			
 			else if (board[k][l] ==1)	// O일 때는 1로 나타낼 것임 
-			{ printf(" O|")	;	}
+			{ printf(" O|")	;
+				o_status ++ ;	}		// white 돌을 변수로 지정해 돌 갯수 체크 
+			
 			
 			else if (board[k][l]== 2)	// X일 때는 2로 나타낼 것임 
-			{ printf(" X|")	;	}
+			{ printf(" X|")	;
+				x_status ++ ;	}		//black 돌을 변수로 지정해 돌 갯수 체크 
 			
 		}
 		printf("\n")	;
@@ -74,6 +79,44 @@ void	print_othello () {
 		
 		printf("\n")	;
 	}
+		printf (" STATUS - WHITE : %d, BLACK : %d \n", o_status, x_status)	; // 돌 갯수를 변수로 지정해 매번 printf_othello가 나올 때 상태를 출력할 수 있음 
+}
+
+int	check_put_othello (char color [], int putStone [] , int board [N][N]) {
+	
+		if (board [putStone[1]][putStone[0]] != 0 )
+		{
+			printf ("invalid input ! (already occupied)\n" )	;
+			return 0	;
+		}
+		
+		else if (putStone [1] >= N || putStone [0] >=N)
+		{
+			printf("invalid input ! (should be less than %d)\n", N)	;
+			return 0	;
+		}
+		//else if 못 뒤집을 때 
+		
+		return 1	;
+}
+
+
+
+int where_othello (int turn ) {
+	
+	int x ,y 	;
+
+	
+	if ( turn == 0)
+	printf ("put a new white othello : ")	;
+	scanf (" %d %d", &x, &y)	;
+	
+	if (turn == 1)
+	printf ( "put a new black othello : ")	;
+	scanf (" %d %d", &x, &y)	;
+	
+	return board[x][y]	;
+	
 }
 
 
@@ -83,44 +126,12 @@ void main () {
 	
 	print_othello ()	;
 	
-	
-	
-/*	int num1=0	;
-	int num2 = 0	;
-	
 
 	
 	
 	
-	
-	while (isGameEnd()==0)
-	{
-		
-	}
 
-	{
-		printf("0 1 2 3 4 5\n")	;
-		printf("-------------\n")	;
-		for (k=0 ; k<6 ;k++)
-		{
-			printf("%d |\n", k)	;
-		
-			for (i=0; i<6 ; i++)
-		{
-			printf("%d |", board[k][i]);
-		}
-	}
-		printf("\n")	;
-	}
 	
-	printf("\n  STATUS - WHITE: 2, BLACK :2")	;
-	printf("\n")	;
-	printf("\n put a new white othello : ")	;
-	scanf("%d %d", &num1, &num2)	;
-	board [num1][num2]= 'O'	; 
-	
-
-	}*/
 
 }
 
