@@ -1,7 +1,7 @@
 #include "board.h"
 
 
-/*void	print_othello () {
+void	print_othello () {
 	
 	int k, l, m;
 	int o_status =0	;
