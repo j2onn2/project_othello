@@ -137,6 +137,7 @@ void put_mine (int x, int y){
 	//각 방향별로 뒤집힌 돌이 갯수 세기 위함  
 	
 	printf("\n")	;
+	
 	//흰색 돌이 었을 경우에는 흰색이 몇개 뒤집었는지 표시  
 	if (turn == WHITE){
 	

@@ -34,15 +34,15 @@ void	print_othello () {
 		for(l=0 ; l<N ; l++)	//행 하나 당 나와있는 열 표현하기 위해 for문을 한번 더 씀 
 		{
 			
-			if (board[k][l] ==EMPTY)	//0일 때는 빈칸으로 놔둠 
+			if (board[k][l] ==EMPTY)	//EMPTY일 때는 빈칸으로 놔둠 
 			{ printf("  |")	;	}
 			
-			else if (board[k][l] == WHITE)	// O일 때는 1로 나타낼 것임 
+			else if (board[k][l] == WHITE)	// O일 때는 WHITE로 나타낼 것임 
 			{ printf(" O|")	;
 				o_status ++ ;	}		// white 돌을 변수로 지정해 돌 갯수 체크 
 			
 			
-			else if (board[k][l]== BLACK)	// X일 때는 2로 나타낼 것임 
+			else if (board[k][l]== BLACK)	// X일 때는 BLACK으로 나타낼 것임 
 			{ printf(" X|")	;
 				x_status ++ ;	}		//black 돌을 변수로 지정해 돌 갯수 체크 
 			
