@@ -7,24 +7,28 @@
 #define	EMPTY 2
 
 
-int board[N][N]	;
-int turn	;
-int opposite	;
-int end = 0	;
 
-int num[2]	;	//num[0]은 흰돌 수, num [1]은 검은돌 수 
-
-//8개의 방향 E,W,N,S,NE,NW,SE,SW 순서 
-int direction [8][2] =  { {0, -1}, {0,1}, {-1,0}, {1,0}, {-1,-1}, {-1,1 }, {1,-1}, {1,1}}	;
-
+//오델로 판 함수  
 void print_othello (void)	;
+
+//오델로 초기화 함수  
 void init_othello (void)	;
 
+//배치할 좌표 입력이 적절한지 체크하는 함수  
 int check_put_othello (int x, int y)	;
 
+
+//배치할 수 있는 공간이 있는지 체크하는 함수  
 int exist_space (void)	;
+
+//입력받은 좌표로 돌을 뒤집는 함수  
 void put_mine (int x, int y)	;
+
+//돌을 뒤집은 후 turn을 바꿔주는 함수  
+void turn_pass (void)	;
+
+//결과를 출력하는 함수  
 void check_result (void) ;
 
-void turn_pass (void)	;
+//게임 종료조건을 가지는 함수  
 int isGameEnd (void)	;

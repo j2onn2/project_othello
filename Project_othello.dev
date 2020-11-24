@@ -60,18 +60,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit2]
-FileName=print.c
-CompileCpp=0
-Folder=
-Compile=0
-Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit3]
-FileName=board.h
+FileName=function.c
 CompileCpp=0
 Folder=
 Compile=0
@@ -81,7 +71,17 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=function.c
+FileName=print.c
+CompileCpp=0
+Folder=
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit2]
+FileName=board.h
 CompileCpp=0
 Folder=
 Compile=0
