@@ -21,7 +21,7 @@ int check_put_othello (int x, int y)	;
 //배치할 수 있는 공간이 있는지 체크하는 함수  
 int exist_space (void)	;
 
-//입력받은 좌표로 돌을 뒤집는 함수  
+//좌표를 입력받고 돌을 뒤집는 함수  
 void put_mine (int x, int y)	;
 
 //돌을 뒤집은 후 turn을 바꿔주는 함수  

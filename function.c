@@ -107,12 +107,12 @@ void put_mine (int x, int y){
 		int r_x = x	;
 		int r_y = y	;
 		
-		if(d_x >= 0&&d_y >= 0 &&(board[d_x][d_y] == opposite)) {
+		if(d_x >= 0&&d_y >= 0 &&(board[d_x][d_y] == opposite)) { //주위에 상대돌이 있을 경우 
 			
 			do {
 				d_x += direction[i][0]	;
 				d_y += direction[i][1]	;
-			}	while (board[d_x][d_y]== opposite)	;	//반대돌이 나올떄까지 주변돌을 계속 감  
+			}	while (board[d_x][d_y]== opposite)	;	//반대돌이라면 계속 감  
 			
 			if (board [d_x][d_y] == turn) {
 				do{
@@ -124,7 +124,7 @@ void put_mine (int x, int y){
 					r_x += direction [i][0]	;
 					r_y += direction [i][1]	;
 			
-				} while (board[r_x][r_y] == opposite)	;	//상대돌이 나오기전까지 내 돌로 바꾸는것과 상대돌의 갯수를 세는 동작을 실행  
+				} while (board[r_x][r_y] == opposite)	;	//상대돌이라면 주어진 조건을 계속 실행  
 				//return;
 			}
 		}

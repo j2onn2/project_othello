@@ -37,12 +37,12 @@ void	print_othello () {
 			if (board[k][l] ==EMPTY)	//EMPTY일 때는 빈칸으로 놔둠 
 			{ printf("  |")	;	}
 			
-			else if (board[k][l] == WHITE)	// O일 때는 WHITE로 나타낼 것임 
+			else if (board[k][l] == WHITE)	// WHITE일 때는 O로 나타낼 것임 
 			{ printf(" O|")	;
 				o_status ++ ;	}		// white 돌을 변수로 지정해 돌 갯수 체크 
 			
 			
-			else if (board[k][l]== BLACK)	// X일 때는 BLACK으로 나타낼 것임 
+			else if (board[k][l]== BLACK)	// BLACK일 때는 X로 나타낼 것임 
 			{ printf(" X|")	;
 				x_status ++ ;	}		//black 돌을 변수로 지정해 돌 갯수 체크 
 			
@@ -55,6 +55,6 @@ void	print_othello () {
 		
 		printf("\n")	;
 	}
-		printf (" STATUS - WHITE : %d, BLACK : %d \n", o_status, x_status)	; // 돌 갯수를 변수로 지정해 매번 printf_othello가 나올 때 상태를 출력할 수 있음 
+		printf (" STATUS - WHITE : %d, BLACK : %d \n", o_status, x_status)	; //변수로 지정해놓은 돌 갯수로 매번 printf_othello가 나올 때 상태를 출력할 수 있음 
 }
 

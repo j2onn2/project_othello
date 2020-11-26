@@ -14,7 +14,7 @@ int opposite	;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 
-//return 값이 1이면 해당 칸은 돌을 놓을 수 있음  
+ 
 
 
 void main () {
